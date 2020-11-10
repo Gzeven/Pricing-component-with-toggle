@@ -1,79 +1,182 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
-@keyframes slideInFromAbove {
+@-webkit-keyframes bounce-from-top {
   0% {
-    transform: translateY(-400%);
+    -webkit-transform: translateY(-500px);
+    transform: translateY(-500px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: translateY(-65px);
+    transform: translateY(-65px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  72% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  81% {
+    -webkit-transform: translateY(-28px);
+    transform: translateY(-28px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  90% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  95% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes bounce-from-top {
+  0% {
+    -webkit-transform: translateY(-500px);
+    transform: translateY(-500px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: translateY(-65px);
+    transform: translateY(-65px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  72% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  81% {
+    -webkit-transform: translateY(-28px);
+    transform: translateY(-28px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  90% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  95% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+@-webkit-keyframes slide-from-above {
+  0% {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
     opacity: 0;
   }
   100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-from-above {
+  0% {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slide-from-left {
+  0% {
+    -webkit-transform: translateX(-200%);
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
     opacity: 1;
   }
 }
-@-webkit-keyframes slide-in-elliptic-left-fwd {
+@keyframes slide-from-left {
   0% {
-    -webkit-transform: translateX(-800px) rotateY(30deg) scale(0);
-    transform: translateX(-800px) rotateY(30deg) scale(0);
-    -webkit-transform-origin: -100% 50%;
-    transform-origin: -100% 50%;
+    -webkit-transform: translateX(-200%);
+    transform: translateX(-200%);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0) rotateY(0) scale(1);
-    transform: translateX(0) rotateY(0) scale(1);
-    -webkit-transform-origin: 1800px 50%;
-    transform-origin: 1800px 50%;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
-@keyframes slide-in-elliptic-left-fwd {
+@-webkit-keyframes slide-from-right {
   0% {
-    -webkit-transform: translateX(-800px) rotateY(30deg) scale(0);
-    transform: translateX(-800px) rotateY(30deg) scale(0);
-    -webkit-transform-origin: -100% 50%;
-    transform-origin: -100% 50%;
+    -webkit-transform: translateX(200%);
+    transform: translateX(200%);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0) rotateY(0) scale(1);
-    transform: translateX(0) rotateY(0) scale(1);
-    -webkit-transform-origin: 1800px 50%;
-    transform-origin: 1800px 50%;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
-@-webkit-keyframes slide-in-elliptic-right-fwd {
+@keyframes slide-from-right {
   0% {
-    -webkit-transform: translateX(800px) rotateY(-30deg) scale(0);
-    transform: translateX(800px) rotateY(-30deg) scale(0);
-    -webkit-transform-origin: -100% 50%;
-    transform-origin: -100% 50%;
+    -webkit-transform: translateX(200%);
+    transform: translateX(200%);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0) rotateY(0) scale(1);
-    transform: translateX(0) rotateY(0) scale(1);
-    -webkit-transform-origin: -1800px 50%;
-    transform-origin: -1800px 50%;
-    opacity: 1;
-  }
-}
-@keyframes slide-in-elliptic-right-fwd {
-  0% {
-    -webkit-transform: translateX(800px) rotateY(-30deg) scale(0);
-    transform: translateX(800px) rotateY(-30deg) scale(0);
-    -webkit-transform-origin: -100% 50%;
-    transform-origin: -100% 50%;
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0) rotateY(0) scale(1);
-    transform: translateX(0) rotateY(0) scale(1);
-    -webkit-transform-origin: -1800px 50%;
-    transform-origin: -1800px 50%;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -83,8 +186,14 @@ body {
   font-size: 16px;
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   text-align: center;
   background-color: #f6f6fe;
@@ -97,15 +206,23 @@ body {
   margin-top: 4rem;
   color: #6d708d;
   font-size: 2rem;
-  animation: 1s ease-out 0s 1 slideInFromAbove;
+  -webkit-animation: 0.9s ease-out 0s 1 bounce-from-top;
+  animation: 0.9s ease-out 0s 1 bounce-from-top;
 }
 
 .toggle-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin: 2.5rem 2.75rem 5rem;
-  animation: 1s ease-out 0s 1 slideInFromAbove;
+  -webkit-animation: 0.3s ease-out 0s 1 slide-from-above;
+  animation: 0.3s ease-out 0s 1 slide-from-above;
 }
 .toggle-button p {
   margin: 0 1.5rem;
@@ -114,7 +231,12 @@ body {
 }
 
 .price-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   margin: 0 1.5rem;
 }
@@ -125,8 +247,14 @@ body {
 }
 .price-cards .price-card h2 {
   color: #494c5f;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   font-size: 2.5rem;
   border-bottom: 1px solid rgba(109, 112, 141, 0.25);
@@ -144,6 +272,8 @@ body {
   padding-bottom: 0.75rem;
 }
 .price-cards .price-card button {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#a3a8f0), to(#696fdd));
+  background-image: -o-linear-gradient(top left, #a3a8f0, #696fdd);
   background-image: linear-gradient(to bottom right, #a3a8f0, #696fdd);
   cursor: pointer;
   color: #fff;
@@ -155,6 +285,8 @@ body {
   font-size: 0.8125rem;
   letter-spacing: 1.4px;
   font-weight: 700;
+  -webkit-transition: color, background-color, 1.5s;
+  -o-transition: color, background-color, 1.5s;
   transition: color, background-color, 1.5s;
 }
 .price-cards .price-card button:hover, .price-cards .price-card button:focus {
@@ -168,12 +300,16 @@ body {
   background-color: #fff;
 }
 .price-cards .price-card-one {
-  animation: 1s ease-out 0s 1 slide-in-elliptic-right-fwd;
+  -webkit-animation: 0.7s ease-out 0s 1 slide-from-left;
+  animation: 0.7s ease-out 0s 1 slide-from-left;
 }
 .price-cards .price-card-three {
-  animation: 1s ease-out 0s 1 slide-in-elliptic-left-fwd;
+  -webkit-animation: 0.7s ease-out 0s 1 slide-from-right;
+  animation: 0.7s ease-out 0s 1 slide-from-right;
 }
 .price-cards .price-card-two {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#a3a8f0), to(#696fdd));
+  background-image: -o-linear-gradient(top left, #a3a8f0, #696fdd);
   background-image: linear-gradient(to bottom right, #a3a8f0, #696fdd);
 }
 .price-cards .price-card-two h2 {
@@ -231,8 +367,12 @@ body {
   display: inline-block;
   width: 56px;
   height: 32px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background-image: -o-linear-gradient(left, #a3a8f0, #696fdd);
   background-image: linear-gradient(to right, #a3a8f0, #696fdd);
   border-radius: 20px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 .switch::after {
@@ -244,6 +384,8 @@ body {
   background-color: white;
   top: 4px;
   left: 5px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 .switch:hover {
@@ -276,7 +418,12 @@ body {
   }
 
   .price-cards {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 0 1.8rem;
   }
