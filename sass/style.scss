@@ -244,6 +244,83 @@ body {
   }
 }
 
+.control-one::after {
+  content: "119.99";
+  font-size: 4.5rem;
+}
+
+.control-two::after {
+  content: "224.99";
+  font-size: 4.5rem;
+}
+
+.control-three::after {
+  content: "339.99";
+  font-size: 4.5rem;
+}
+
+#toggle:checked ~ .price-cards .price-card-one .control-one::after {
+  content: "19.99";
+}
+
+#toggle:checked ~ .price-cards .price-card-two .control-two::after {
+  content: "24.99";
+}
+
+#toggle:checked ~ .price-cards .price-card-three .control-three::after {
+  content: "39.99";
+}
+
+#toggle:focus ~ .toggle-button label {
+  border-bottom: 2px solid black;
+}
+
+.switch {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  width: 56px;
+  height: 32px;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from($gradient1),
+    to($gradient2)
+  );
+  background-image: -o-linear-gradient(left, $gradient1, $gradient2);
+  background-image: linear-gradient(to right, $gradient1, $gradient2);
+  border-radius: 20px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: white;
+    top: 4px;
+    left: 5px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.checkbox:checked + div .switch::after {
+  left: 1.625rem;
+}
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .price-cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -371,79 +448,6 @@ body {
       }
     }
   }
-}
-
-.control-one::after {
-  content: "119.99";
-  font-size: 4.5rem;
-}
-
-.control-two::after {
-  content: "224.99";
-  font-size: 4.5rem;
-}
-
-.control-three::after {
-  content: "339.99";
-  font-size: 4.5rem;
-}
-
-#toggle:checked ~ .price-cards .price-card-one .control-one::after {
-  content: "19.99";
-}
-
-#toggle:checked ~ .price-cards .price-card-two .control-two::after {
-  content: "24.99";
-}
-
-#toggle:checked ~ .price-cards .price-card-three .control-three::after {
-  content: "39.99";
-}
-
-.switch {
-  cursor: pointer;
-  position: relative;
-  display: inline-block;
-  width: 56px;
-  height: 32px;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from($gradient1),
-    to($gradient2)
-  );
-  background-image: -o-linear-gradient(left, $gradient1, $gradient2);
-  background-image: linear-gradient(to right, $gradient1, $gradient2);
-  border-radius: 20px;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  &::after {
-    content: "";
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background-color: white;
-    top: 4px;
-    left: 5px;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-  &:hover {
-    opacity: 0.5;
-  }
-}
-
-.checkbox:checked + div .switch::after {
-  left: 1.625rem;
-}
-.checkbox {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
 }
 
 @media only screen and (min-width: 1050px) {
